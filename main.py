@@ -19,7 +19,8 @@ def log_chars(chars_dictionary, total_chars):
     print('--- Begin report books/frankenstein.txt ---')
     print(f'{total_chars} words found in the document \n')
     for key, value in chars_dictionary.items():
-        print(f"The '{key}' character was found {value} times")
+        if key.isalpha():
+            print(f"The '{key}' character was found {value} times")
     print('--- End report ---')
 
 def get_num_words(text):
